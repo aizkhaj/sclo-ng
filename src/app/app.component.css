@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: black;
+  background-color: bisque;
+  margin: 5px;
+  padding: 5px;
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
