@@ -5,6 +5,7 @@
 }
 
 .card {
+  flex-direction: column;
   border: 3px black;
   background-color: blanchedalmond;
   padding: 15px 30px;

@@ -13,11 +13,27 @@ export class LoginComponent implements OnInit {
     password: '',
   };
 
+  loginId: string;
+  randomId: string;
+  errorMessage: string;
+
   constructor(private loginService: LoginService) {}
 
   ngOnInit(): void {}
 
   login(userCredentials: Credentials) {
-    return this.loginService.login(userCredentials);
+    return this.loginService.login(userCredentials).subscribe(
+      (resData) => {
+        this.loginId = resData.login;
+      },
+      (error) => {
+        this.errorMessage = error.message;
+      }
+    );
+  }
+
+  funkyId(loginId: string) {
+    const splitUp = loginId.split('');
+    this.randomId = splitUp.sort().join('');
   }
 }

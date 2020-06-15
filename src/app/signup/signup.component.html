@@ -1,5 +1,5 @@
 <div class="form-container">
-  <form (submit)="login(userCredentials)">
+  <form (submit)="signup(userCredentials)">
     <div class="card">
       <input
         type="text"
@@ -13,16 +13,13 @@
         placeholder="password"
         [(ngModel)]="userCredentials.password"
       />
-      <button type="submit">Login</button>
+      <button type="submit">Signup</button>
     </div>
   </form>
 </div>
 
 <div class="big-notice" *ngIf="loginId">
-  <p>Nice! You're in {{ loginId }}.</p>
-  <p>Click the button to see a (sorted) variation of your loginId.</p>
-  <button (click)="funkyId(loginId)">Sort me out</button>
-  {{ randomId }}
+  <p>Nice! You're signed up. Try logging in!</p>
 </div>
 
 <div class="big-notice" *ngIf="errorMessage">
